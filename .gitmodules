@@ -1,0 +1,6 @@
+[submodule "lib/json"]
+	path = lib/json
+	url = https://github.com/sheredom/json.h.git
+[submodule "lib/liblcb"]
+	path = lib/liblcb
+	url = https://github.com/rozhuk-im/liblcb.git
