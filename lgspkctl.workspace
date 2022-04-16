@@ -2,12 +2,12 @@
 <CodeLite_Workspace Name="lgspkctl" Database="" Version="10000">
   <Project Name="lgspkctl" Path="lgspkctl.project" Active="Yes"/>
   <BuildMatrix>
-    <WorkspaceConfiguration Name="Debug" Selected="yes">
+    <WorkspaceConfiguration Name="Debug">
       <Environment/>
       <Project Name="lgspkctl" ConfigName="Debug"/>
       <Project Name="lgspkctl" ConfigName="Debug"/>
     </WorkspaceConfiguration>
-    <WorkspaceConfiguration Name="Release" Selected="no">
+    <WorkspaceConfiguration Name="Release">
       <Environment/>
       <Project Name="lgspkctl" ConfigName="Release"/>
       <Project Name="lgspkctl" ConfigName="Release"/>

@@ -58,7 +58,7 @@
       <Compiler Options="-g;-O0;-Wall" C_Options="-Weverything;-g -DDEBUG;-O0;-pedantic;-W;-Wall;-Wno-reserved-id-macro;-Wno-unused-macros;-Wno-variadic-macros;-Wno-gnu-zero-variadic-macro-arguments" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0"/>
       <Linker Options="" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
-      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ProjectPath)/build/src/" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
@@ -98,7 +98,7 @@
       </Compiler>
       <Linker Options="" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
-      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ConfigurationName)" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="$(ProjectPath)/build/src/" Command="$(OutputFile)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
       <BuildSystem Name="Default"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
@@ -113,9 +113,9 @@
       <CustomBuild Enabled="yes">
         <RebuildCommand/>
         <CleanCommand>rm -rf build</CleanCommand>
-        <BuildCommand>mkdir build
-cd build
-cmake -G Ninja -D CMAKE_VERBOSE_MAKEFILE=true ..
+        <BuildCommand>mkdir build &amp;&amp;
+cd build &amp;&amp;
+cmake -G Ninja -D CMAKE_VERBOSE_MAKEFILE=true .. &amp;&amp;
 cmake --build . -- -j`getconf NPROCESSORS_ONLN`</BuildCommand>
         <PreprocessFileCommand/>
         <SingleFileCommand/>
