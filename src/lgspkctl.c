@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2019 - 2020 Rozhuk Ivan <rozhuk.im@gmail.com>
+ * Copyright (c) 2019-2024 Rozhuk Ivan <rozhuk.im@gmail.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -59,19 +59,19 @@
 #define sstrlen(__str)	((NULL == (__str)) ? 0 : strlen((__str)))
 
 
-#define LOG_ERR(__error, __descr)					\
-	    if (0 != (__error))						\
+#define LOG_ERR(_error, _descr)						\
+	    if (0 != (_error))						\
 		fprintf(stderr, "%s , line: %i, error: %i - %s - %s\n",	\
-		    __FUNCTION__, __LINE__, (__error), strerror((__error)), (__descr))
-#define LOG_EV(__descr)							\
+		    __FUNCTION__, __LINE__, (_error), strerror((_error)), (_descr))
+#define LOG_EV(_descr)							\
 	    fprintf(stdout, "%s , line: %i: %s\n",			\
-	        __FUNCTION__, __LINE__, (__descr))
-#define LOG_INFO(__descr)						\
-	    fprintf(stdout, "%s\n", (__descr))
-#define LOG_ERR_FMT(__error, fmt, args...)				\
-	    if (0 != (__error))						\
+	        __FUNCTION__, __LINE__, (_descr))
+#define LOG_INFO(_descr)						\
+	    fprintf(stdout, "%s\n", (_descr))
+#define LOG_ERR_FMT(_error, fmt, args...)				\
+	    if (0 != (_error))						\
 		fprintf(stderr, "%s , line: %i, error: %i - %s" fmt "\n", \
-		    __FUNCTION__, __LINE__, (__error), strerror((__error)), ##args)
+		    __FUNCTION__, __LINE__, (_error), strerror((_error)), ##args)
 #define LOG_EV_FMT(fmt, args...)					\
 	    fprintf(stdout, "%s , line: %i: " fmt "\n",			\
 	        __FUNCTION__, __LINE__, ##args)
