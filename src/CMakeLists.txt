@@ -1,6 +1,5 @@
 
 set(LGSPKCTL_BIN	lgspkctl.c
-			../lib/json/json.c
 			../lib/liblcb/src/net/socket.c
 			../lib/liblcb/src/net/socket_address.c)
 
