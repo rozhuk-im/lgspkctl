@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="lgspkctl" Version="11000" InternalType="Console">
   <VirtualDirectory Name="root">
+    <File Name=".editorconfig"/>
     <File Name="readme.md"/>
     <File Name="CMakeLists.txt"/>
   </VirtualDirectory>
